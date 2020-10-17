@@ -6,16 +6,35 @@
   <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
+  <p>What question are you asking?</p>
+  <p>Think carefully on what kind of question you wish to ask and select the best match below. Remember, the cards cannot tell you specific details - so keep this in mind as you ask!</p>
+  <a href='javascript:stand()'>Where you stand now</a>
+  <a href='javascript:way()'>What is standing in your way</a>
+  <a href='javascript:help()'>What will help you</a>
+  <a href='javascript:relGeneral()'>General Relationship</a>
+  <a href='javascript:relFuture()'>Where your relationship is heading</a>
+  <a href='javascript:together()'>What will bring you together</a>
+  <a href='javascript:opportunity()'>Opportunities</a>
+  <a href='javascript:choice()'>A choice ahead</a>
+  <a href='javascript:disco()'>Self Discovery</a>
+  <a href='javascript:path()'>Your current Path</a>
+  <a href='javascript:general()'>General Reading</a>
   <div class="container">
     <h1>Tarot Reader</h1>
+    <div class='card_container'><div id='title_1'></div>
     <div id="card_1" class="card back">
       <p id="num_1"></p><h4 id="picked_1" class="picked"></h4><h3 id="suit_1" class="suit"></h3>
     </div>
+    </div>
+    <div class='card_container'><div id='title_2'></div>
     <div id="card_2" class="card back">
       <p id="num_2"></p><h4 id="picked_2" class="picked"></h4><h3 id="suit_2" class="suit"></h3>
     </div>
+    </div>
+    <div class='card_container'><div id='title_3'></div>
     <div id="card_3" class="card back">
       <p id="num_3"></p><h4 id="picked_3" class="picked"></h4><h3 id="suit_3" class="suit"></h3>
+    </div>
     </div>
     <a href="javascript:deal()" id="deal">Deal Cards</a>
   </div>
