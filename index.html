@@ -4,39 +4,55 @@
   <meta charset="UTF-8">
   <title>Tarot Card Reader</title>
   <link rel="stylesheet" href="css/style.css" type="text/css">
+  <!-- Material CSS & JS pre-setup + icons to set things up faster -->
+  <head>
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+           
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
 </head>
 <body>
-  <p>What question are you asking?</p>
+  <div class="container questions">
+    <div class="row">
+  <h4>What question are you asking?</h4>
   <p>Think carefully on what kind of question you wish to ask and select the best match below. Remember, the cards cannot tell you specific details - so keep this in mind as you ask!</p>
-  <a href='javascript:stand()'>Where you stand now</a>
-  <a href='javascript:way()'>What is standing in your way</a>
-  <a href='javascript:help()'>What will help you</a>
-  <a href='javascript:relGeneral()'>General Relationship</a>
-  <a href='javascript:relFuture()'>Where your relationship is heading</a>
-  <a href='javascript:together()'>What will bring you together</a>
-  <a href='javascript:opportunity()'>Opportunities</a>
-  <a href='javascript:choice()'>A choice ahead</a>
-  <a href='javascript:disco()'>Self Discovery</a>
-  <a href='javascript:path()'>Your current Path</a>
-  <a href='javascript:general()'>General Reading</a>
+  <div class='col s2'><a class="waves-effect waves-light btn" href='javascript:stand()'>Where you stand now</a></div>
+  <div class='col s2'><a class="waves-effect waves-light btn" href='javascript:way()'>What is standing in your way</a></div>
+  <div class='col s2'><a class="waves-effect waves-light btn" href='javascript:help()'>What will help you</a></div>
+  <div class='col s2'><a class="waves-effect waves-light btn" href='javascript:relGeneral()'>General Relationship</a></div>
+  <div class='col s2'><a class="waves-effect waves-light btn" href='javascript:relFuture()'>Where your relationship is heading</a></div>
+  <div class='col s2'><a class="waves-effect waves-light btn" href='javascript:together()'>What will bring you together</a></div>
+  <div class='col offset-s1 s2'><a class="waves-effect waves-light btn" href='javascript:opportunity()'>Opportunities</a></div>
+  <div class='col s2'><a class="waves-effect waves-light btn" href='javascript:choice()'>A choice ahead</a></div>
+  <div class='col s2'><a class="waves-effect waves-light btn" href='javascript:disco()'>Self Discovery</a></div>
+  <div class='col s2'><a class="waves-effect waves-light btn" href='javascript:path()'>Your current Path</a></div>
+  <div class='col s2'><a class="waves-effect waves-light btn" href='javascript:general()'>General Reading</a></div>
+</div>
+</div>
   <div class="container">
     <h1>Tarot Reader</h1>
-    <div class='card_container'><div id='title_1'></div>
+    <div class="row">
+    <div class='card_container col s4'><div id='title_1'></div>
     <div id="card_1" class="card back">
-      <p id="num_1"></p><h4 id="picked_1" class="picked"></h4><h3 id="suit_1" class="suit"></h3>
+      <h5 id="num_1"></h5><h5 id="picked_1" class="picked"></h5><h5 id="suit_1" class="suit"></h5>
     </div>
     </div>
-    <div class='card_container'><div id='title_2'></div>
+    <div class='card_container col s4'><div id='title_2'></div>
     <div id="card_2" class="card back">
-      <p id="num_2"></p><h4 id="picked_2" class="picked"></h4><h3 id="suit_2" class="suit"></h3>
+      <h5 id="num_2"></h5><h5 id="picked_2" class="picked"></h5><h5 id="suit_2" class="suit"></h5>
     </div>
     </div>
-    <div class='card_container'><div id='title_3'></div>
+    <div class='card_container col s4'><div id='title_3'></div>
     <div id="card_3" class="card back">
-      <p id="num_3"></p><h4 id="picked_3" class="picked"></h4><h3 id="suit_3" class="suit"></h3>
+      <h5 id="num_3"></h5><h5 id="picked_3" class="picked"></h5><h5 id="suit_3" class="suit"></h5>
     </div>
     </div>
-    <a href="javascript:deal()" id="deal">Deal Cards</a>
+    <a class="waves-effect waves-light btn-large" href="javascript:deal()" id="deal">Deal Cards</a>
+  </div>
   </div>
   <script src="js/index.js"></script>
 </body>

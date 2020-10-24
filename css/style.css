@@ -63,3 +63,15 @@ footer h6 {
   position: relative;
   display: inline-block;
 }
+
+.col.s2 {
+  margin-top: 10px;
+}
+
+.container.questions {
+  min-height: 200px !important;
+}
+
+.card_container.col.s4 {
+  margin-bottom: 40px;
+}

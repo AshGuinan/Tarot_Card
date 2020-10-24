@@ -129,3 +129,5 @@ const general = () => {
     document.getElementById(`title_2`).innerHTML = "The cause";
     document.getElementById(`title_3`).innerHTML = "The solutions";
 }
+
+mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
