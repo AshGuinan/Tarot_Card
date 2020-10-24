@@ -75,56 +75,67 @@ const deal = () => {
 }
 
 const stand = () => {
+    document.getElementById(`deal`).classList.remove('disabled');
     document.getElementById(`title_1`).innerHTML = "Where you stand now";
     document.getElementById(`title_2`).innerHTML = "What you aspire to";
     document.getElementById(`title_3`).innerHTML = "How to get there";
 }
 const way = () => {
+    document.getElementById(`deal`).classList.remove('disabled');
     document.getElementById(`title_1`).innerHTML = "What you aspire to";
     document.getElementById(`title_2`).innerHTML = "What is standing in your way";
     document.getElementById(`title_3`).innerHTML = "How you can overcome this";
 }
 const help = () => {
+    document.getElementById(`deal`).classList.remove('disabled');
     document.getElementById(`title_1`).innerHTML = "What will help you";
     document.getElementById(`title_2`).innerHTML = "What will hinder you";
     document.getElementById(`title_3`).innerHTML = "What is your unrealised potential";
 }
 const relGeneral = () => {
+    document.getElementById(`deal`).classList.remove('disabled');
     document.getElementById(`title_1`).innerHTML = "You";
     document.getElementById(`title_2`).innerHTML = "The other person";
     document.getElementById(`title_3`).innerHTML = "The relationship";
 }
 const relFuture = () => {
+    document.getElementById(`deal`).classList.remove('disabled');
     document.getElementById(`title_1`).innerHTML = "What you want from the relationship";
     document.getElementById(`title_2`).innerHTML = "What they want from the relationship";
     document.getElementById(`title_3`).innerHTML = "Where the relationship is heading";
 }
 const together = () => {
+    document.getElementById(`deal`).classList.remove('disabled');
     document.getElementById(`title_1`).innerHTML = "What brings you together";
     document.getElementById(`title_2`).innerHTML = "What pulls you apart";
     document.getElementById(`title_3`).innerHTML = "What needs your attention";
 }
 const opportunity = () => {
+    document.getElementById(`deal`).classList.remove('disabled');
     document.getElementById(`title_1`).innerHTML = "Opportunities ahead";
     document.getElementById(`title_2`).innerHTML = "Challenges";
     document.getElementById(`title_3`).innerHTML = "Outcome";
 }
 const choice = () => {
+    document.getElementById(`deal`).classList.remove('disabled');
     document.getElementById(`title_1`).innerHTML = "Choice 1";
     document.getElementById(`title_2`).innerHTML = "Choice 2";
     document.getElementById(`title_3`).innerHTML = "Choice 3";
 }
 const disco = () => {
+    document.getElementById(`deal`).classList.remove('disabled');
     document.getElementById(`title_1`).innerHTML = "Mind";
     document.getElementById(`title_2`).innerHTML = "Body";
     document.getElementById(`title_3`).innerHTML = "Spirit";
 }
 const path = () => {
+    document.getElementById(`deal`).classList.remove('disabled');
     document.getElementById(`title_1`).innerHTML = "You";
     document.getElementById(`title_2`).innerHTML = "Your current path";
     document.getElementById(`title_3`).innerHTML = "Your potential";
 }
 const general = () => {
+    document.getElementById(`deal`).classList.remove('disabled');
     document.getElementById(`title_1`).innerHTML = "The true nature of your problem";
     document.getElementById(`title_2`).innerHTML = "The cause";
     document.getElementById(`title_3`).innerHTML = "The solutions";
