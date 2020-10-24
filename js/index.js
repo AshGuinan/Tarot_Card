@@ -65,9 +65,9 @@ const deal = () => {
     document.getElementById(`suit_${i+1}`).innerHTML = DECK[i].suit;
     // if the card is reversed, display that on the card
     if(reversed()) {
-      document.getElementById(`picked_${i+1}`).innerHTML = "(reversed)";
-      // document.getElementById(`card_${i+1}`).style.transform = "rotate(180deg)";
-      // --- come back to this ---
+      //After much experiementing realising the easy solution is the best...
+      document.getElementById(`card_${i+1}`).style.transform = "rotate(180deg)";
+      
     } else {
       document.getElementById(`picked_${i+1}`).innerHTML = "";
     }
