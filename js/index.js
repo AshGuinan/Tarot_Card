@@ -34,6 +34,7 @@ for(let i = 0; i < MAJOR.length; i++) {
 }
 
 const deal = () => {
+  let cards = document.getElementsByClassName('card');
   // Shuffle the DECK!
   // Swap the location of 2 random cards
   for(let i = 0; i < 1000; i++) {
@@ -51,7 +52,7 @@ const deal = () => {
   }
   
   // Fill the HTML with the content
-  for(let i = 0; i < 3; i++) {
+  for(let i = 0; i < cards.length; i++) {
     document.getElementById(`card_${i+1}`).style.background = "white";
     // if a card from the Minor Arcana, display the value at the top and the suit
     if(DECK[i].minor) {
@@ -75,70 +76,63 @@ const deal = () => {
 }
 
 const stand = () => {
-    document.getElementById(`deal`).classList.remove('disabled');
-    document.getElementById(`title_1`).innerHTML = "Where you stand now";
-    document.getElementById(`title_2`).innerHTML = "What you aspire to";
-    document.getElementById(`title_3`).innerHTML = "How to get there";
+    cardSetup(["Where you stand now", "What you aspire to", "How to get there"])
 }
 const way = () => {
-    document.getElementById(`deal`).classList.remove('disabled');
-    document.getElementById(`title_1`).innerHTML = "What you aspire to";
-    document.getElementById(`title_2`).innerHTML = "What is standing in your way";
-    document.getElementById(`title_3`).innerHTML = "How you can overcome this";
+   cardSetup(["What you aspire to", "What is standing in your way", "How you can overcome this"]);
 }
 const help = () => {
-    document.getElementById(`deal`).classList.remove('disabled');
-    document.getElementById(`title_1`).innerHTML = "What will help you";
-    document.getElementById(`title_2`).innerHTML = "What will hinder you";
-    document.getElementById(`title_3`).innerHTML = "What is your unrealised potential";
+    cardSetup(["What will help you", "What will hinder you", "What is your unrealised potential"])
 }
 const relGeneral = () => {
-    document.getElementById(`deal`).classList.remove('disabled');
-    document.getElementById(`title_1`).innerHTML = "You";
-    document.getElementById(`title_2`).innerHTML = "The other person";
-    document.getElementById(`title_3`).innerHTML = "The relationship";
+   cardSetup([ "You", "The other person", "The relationship"]);
+   
 }
 const relFuture = () => {
-    document.getElementById(`deal`).classList.remove('disabled');
-    document.getElementById(`title_1`).innerHTML = "What you want from the relationship";
-    document.getElementById(`title_2`).innerHTML = "What they want from the relationship";
-    document.getElementById(`title_3`).innerHTML = "Where the relationship is heading";
+    cardSetup(["What you want from the relationship", "What they want from the relationship", "Where the relationship is heading"]);
 }
 const together = () => {
-    document.getElementById(`deal`).classList.remove('disabled');
-    document.getElementById(`title_1`).innerHTML = "What brings you together";
-    document.getElementById(`title_2`).innerHTML = "What pulls you apart";
-    document.getElementById(`title_3`).innerHTML = "What needs your attention";
+    cardSetup(["What brings you together", "What pulls you apart", "What needs your attention"]);
 }
 const opportunity = () => {
-    document.getElementById(`deal`).classList.remove('disabled');
-    document.getElementById(`title_1`).innerHTML = "Opportunities ahead";
-    document.getElementById(`title_2`).innerHTML = "Challenges";
-    document.getElementById(`title_3`).innerHTML = "Outcome";
+    cardSetup(["Opportunities ahead", "Challenges", "Outcome"]);
 }
 const choice = () => {
-    document.getElementById(`deal`).classList.remove('disabled');
-    document.getElementById(`title_1`).innerHTML = "Choice 1";
-    document.getElementById(`title_2`).innerHTML = "Choice 2";
-    document.getElementById(`title_3`).innerHTML = "Choice 3";
+    cardSetup(["Choice 1", "Choice 2", "Choice 3"])
 }
 const disco = () => {
-    document.getElementById(`deal`).classList.remove('disabled');
-    document.getElementById(`title_1`).innerHTML = "Mind";
-    document.getElementById(`title_2`).innerHTML = "Body";
-    document.getElementById(`title_3`).innerHTML = "Spirit";
+    cardSetup(["Mind", "Body", "Spirit"]);
 }
 const path = () => {
-    document.getElementById(`deal`).classList.remove('disabled');
-    document.getElementById(`title_1`).innerHTML = "You";
-    document.getElementById(`title_2`).innerHTML = "Your current path";
-    document.getElementById(`title_3`).innerHTML = "Your potential";
+    cardSetup(["You", "Your current path", "Your potential"]);
 }
 const general = () => {
+    cardSetup(["The true nature of your problem", "The cause", "The solutions"]);
+}
+
+let cardSetup = function(titles) {
+  cardClear();
+  titles.forEach((title, index) => {
+    let idNum = index+1;
+    let titleId = "title_" + idNum;
+    document.getElementById(titleId).innerHTML = title;
+  });
     document.getElementById(`deal`).classList.remove('disabled');
-    document.getElementById(`title_1`).innerHTML = "The true nature of your problem";
-    document.getElementById(`title_2`).innerHTML = "The cause";
-    document.getElementById(`title_3`).innerHTML = "The solutions";
+}
+
+let cardClear = function() {
+  let cards = document.getElementsByClassName('card');
+  for (var i=0; i<cards.length; i++) {
+    let card = cards[i];
+    console.log(card.id);
+    document.getElementById(card.id).style.removeProperty('background');
+    let cardChildren = document.getElementById(card.id);
+    for (let i = 0; i < cardChildren.children.length; i++) {
+      console.log(cardChildren.children[i]);
+      document.getElementById(cardChildren.children[i].id).innerText = '';
+    }
+  }
+  
 }
 
 mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
