@@ -35,14 +35,15 @@ for(let i = 0; i < MAJOR.length; i++) {
 
 const deal = () => {
   // Shuffle the DECK!
-  // Swap the location of 2 random cards
-  for(let i = 0; i < 1000; i++) {
-    let card1 = Math.floor(Math.random() * DECK.length);
-    let card2 = Math.floor(Math.random() * DECK.length);
+  // Swap the location of 2 cards
+  // using Fisher-Yates shuffle. 
+  // https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+  for(let i = DECK.length - 1; i > 0; i--) {
+    let card2Index = Math.floor(Math.random() * (i + 1));
 
-    let tmp = DECK[card1];
-    DECK[card1] = DECK[card2];
-    DECK[card2] = tmp;
+    let tmp = DECK[i];
+    DECK[card1] = DECK[card2Index];
+    DECK[card2Index] = tmp;
   }
   
   // Is the card upright or reversed?
